@@ -1,0 +1,751 @@
+{
+  "staff_users": [
+    {
+      "id": 15,
+      "name": "Head Administrator",
+      "email": "admin@travelcompany.com",
+      "password_hash": "$2a$10$p0C43n4O/UKoH6pRCkTC.uYZ6QcCdCJ9PJw16tdtTz80nYEbxBDby",
+      "role": "admin",
+      "status": "active",
+      "created_at": "2026-09-02 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 16,
+      "name": "Verification Staff",
+      "email": "staff@travelcompany.com",
+      "password_hash": "$2a$10$p0C43n4O/UKoH6pRCkTC.uQQYxMYb19ymslzB7Ke5sem2c8X2XJSa",
+      "role": "staff",
+      "status": "active",
+      "created_at": "2026-09-02 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 27,
+      "name": "Rahul Sharma",
+      "email": "rahul@himalayanguides.com",
+      "mobile": "9876543210",
+      "password_hash": "$2a$10$p0C43n4O/UKoH6pRCkTC.uPxuGomN7bGcEwHuzdBBEieKAnly1TNW",
+      "profile_photo": "/uploads/profiles/demo-rahul.jpg",
+      "status": "active",
+      "kyc_status": "approved",
+      "rejection_reason": null,
+      "verification_remarks": "Documents and credentials verified. Tourism license valid until 2028.",
+      "verified_at": "2026-09-02T20:47:40.482Z",
+      "verified_by": 15,
+      "created_at": "2026-08-28 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 28,
+      "name": "Priya Nair",
+      "email": "priya@keralabackwaters.com",
+      "mobile": "9812345678",
+      "password_hash": "$2a$10$p0C43n4O/UKoH6pRCkTC.uPxuGomN7bGcEwHuzdBBEieKAnly1TNW",
+      "profile_photo": null,
+      "status": "active",
+      "kyc_status": "pending",
+      "rejection_reason": null,
+      "verification_remarks": null,
+      "verified_at": null,
+      "verified_by": null,
+      "created_at": "2026-08-28 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 29,
+      "name": "Amit Singh",
+      "email": "amit@rajasthantours.com",
+      "mobile": "9898989898",
+      "password_hash": "$2a$10$p0C43n4O/UKoH6pRCkTC.uPxuGomN7bGcEwHuzdBBEieKAnly1TNW",
+      "profile_photo": null,
+      "status": "active",
+      "kyc_status": "rejected",
+      "rejection_reason": "Aadhaar document copy is blurred and Tourism License number does not match Govt registry records.",
+      "verification_remarks": "Please upload clear color scans of ID and updated Tourism License certificate.",
+      "verified_at": "2026-09-02T20:47:40.485Z",
+      "verified_by": 15,
+      "created_at": "2026-08-28 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 30,
+      "name": "abc",
+      "email": "abc@abc.com",
+      "mobile": "9713474239",
+      "password_hash": "$2a$10$c66CR62j39BxPTXo.SE4yeyEmCy9rEUxA1a7PE6tmU9Y3P6K1pSQy",
+      "profile_photo": null,
+      "status": "active",
+      "kyc_status": "approved",
+      "rejection_reason": null,
+      "verification_remarks": "Auto-verified successfully",
+      "verified_at": null,
+      "verified_by": null,
+      "created_at": "2026-09-02 21:11:10",
+      "updated_at": "2026-09-02 21:11:28"
+    }
+  ],
+  "vendor_kyc": [
+    {
+      "id": 25,
+      "vendor_id": 27,
+      "full_name": "Rahul Sharma",
+      "mobile": "9876543210",
+      "email": "rahul@himalayanguides.com",
+      "dob": "1992-05-14",
+      "profile_photo": null,
+      "business_name": "Himalayan Treks & Mountain Guides",
+      "business_type": "Tour Guide",
+      "pan_number": "ABCPS1234F",
+      "aadhaar_number": "987654321098",
+      "gst_number": "02ABCPS1234F1Z5",
+      "tourism_license_no": "HP-TOUR-2024-889",
+      "address": "The Mall Road, Near Circuit House",
+      "city": "Manali",
+      "state": "Himachal Pradesh",
+      "pincode": "175131",
+      "latitude": 32.2396,
+      "longitude": 77.1887,
+      "status": "approved",
+      "submitted_at": "2026-08-29 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 26,
+      "vendor_id": 28,
+      "full_name": "Priya Nair",
+      "mobile": "9812345678",
+      "email": "priya@keralabackwaters.com",
+      "dob": "1995-11-20",
+      "profile_photo": null,
+      "business_name": "Backwater Haven & Kayaking",
+      "business_type": "Activity Provider",
+      "pan_number": "BNMPN5678G",
+      "aadhaar_number": "876543210987",
+      "gst_number": null,
+      "tourism_license_no": "KL-ACT-2025-102",
+      "address": "Punnamada Finishing Point",
+      "city": "Alleppey",
+      "state": "Kerala",
+      "pincode": "688006",
+      "latitude": 9.4981,
+      "longitude": 76.3388,
+      "status": "pending",
+      "submitted_at": "2026-08-29 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 27,
+      "vendor_id": 29,
+      "full_name": "Amit Singh",
+      "mobile": "9898989898",
+      "email": "amit@rajasthantours.com",
+      "dob": "1988-08-05",
+      "profile_photo": null,
+      "business_name": "Royal Desert Safaris",
+      "business_type": "Tour Operator",
+      "pan_number": "CPRSA9012K",
+      "aadhaar_number": "765432109876",
+      "gst_number": "08CPRSA9012K1Z9",
+      "tourism_license_no": "RJ-DESERT-2022-44",
+      "address": "Sam Sand Dunes Road",
+      "city": "Jaisalmer",
+      "state": "Rajasthan",
+      "pincode": "345001",
+      "latitude": 26.9157,
+      "longitude": 70.9083,
+      "status": "rejected",
+      "submitted_at": "2026-08-29 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 28,
+      "vendor_id": 30,
+      "full_name": "Akash 123",
+      "mobile": "9876543210",
+      "email": "akash123@himalayanguides.com",
+      "dob": "1992-05-14",
+      "profile_photo": null,
+      "business_name": "Himalayan Treks & Mountain Guides",
+      "business_type": "Tour Guide",
+      "pan_number": "ABCPS1234F",
+      "aadhaar_number": "987654321098",
+      "gst_number": "02ABCPS1234F1Z5",
+      "tourism_license_no": "HP-TOUR-2024-889",
+      "address": "The Mall Road, Near Circuit House",
+      "city": "Manali",
+      "state": "Himachal Pradesh",
+      "pincode": "175131",
+      "latitude": null,
+      "longitude": null,
+      "status": "pending",
+      "submitted_at": "2026-09-02 21:11:28",
+      "updated_at": "2026-09-02 21:11:28"
+    }
+  ],
+  "vendor_documents": [
+    {
+      "id": 36,
+      "vendor_id": 27,
+      "doc_type": "pan_card",
+      "file_path": "/uploads/documents/demo-pan-rahul.pdf",
+      "file_name": "rahul_pan.pdf",
+      "file_size": 245000,
+      "mime_type": "application/pdf",
+      "uploaded_at": "2026-08-29 20:47:40"
+    },
+    {
+      "id": 37,
+      "vendor_id": 27,
+      "doc_type": "tourism_license",
+      "file_path": "/uploads/documents/demo-license-rahul.pdf",
+      "file_name": "hp_tourism_license.pdf",
+      "file_size": 312000,
+      "mime_type": "application/pdf",
+      "uploaded_at": "2026-08-29 20:47:40"
+    },
+    {
+      "id": 38,
+      "vendor_id": 27,
+      "doc_type": "aadhaar_card",
+      "file_path": "/uploads/documents/demo-aadhaar-rahul.jpg",
+      "file_name": "rahul_aadhaar.jpg",
+      "file_size": 180000,
+      "mime_type": "image/jpeg",
+      "uploaded_at": "2026-08-29 20:47:40"
+    },
+    {
+      "id": 39,
+      "vendor_id": 28,
+      "doc_type": "pan_card",
+      "file_path": "/uploads/documents/demo-pan-priya.pdf",
+      "file_name": "priya_pan.pdf",
+      "file_size": 210000,
+      "mime_type": "application/pdf",
+      "uploaded_at": "2026-08-29 20:47:40"
+    },
+    {
+      "id": 40,
+      "vendor_id": 28,
+      "doc_type": "business_reg",
+      "file_path": "/uploads/documents/demo-reg-priya.pdf",
+      "file_name": "kerala_tourism_reg.pdf",
+      "file_size": 450000,
+      "mime_type": "application/pdf",
+      "uploaded_at": "2026-08-29 20:47:40"
+    }
+  ],
+  "listings": [
+    {
+      "id": 27,
+      "vendor_id": 27,
+      "title": "Solang Valley Snow & Paragliding Adventure",
+      "description": "Experience high-altitude paragliding, zorbing, and scenic snow landscapes in Solang Valley with certified mountain pilots.",
+      "destination": "Manali, Himachal Pradesh",
+      "price": 2500,
+      "duration": "1 Day",
+      "max_travellers": 10,
+      "status": "active",
+      "created_at": "2026-08-30 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 28,
+      "vendor_id": 27,
+      "title": "Hampta Pass Trekking & Riverside Camping",
+      "description": "Stunning 4-day crossover trek from Kullu valley into the arid Chandra valley of Spiti with full guide support & meals.",
+      "destination": "Manali & Spiti",
+      "price": 8500,
+      "duration": "4 Days 3 Nights",
+      "max_travellers": 8,
+      "status": "active",
+      "created_at": "2026-08-30 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 29,
+      "vendor_id": 27,
+      "title": "Old Manali Heritage & Cafe Walking Tour",
+      "description": "Explore ancient wooden temples, hidden pine forest trails, and vibrant cultural cafes with a local certified guide.",
+      "destination": "Old Manali",
+      "price": 999,
+      "duration": "4 Hours",
+      "max_travellers": 12,
+      "status": "active",
+      "created_at": "2026-08-30 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    }
+  ],
+  "travellers": [
+    {
+      "id": 23,
+      "name": "Vikram Sharma",
+      "email": "vikram.sharma@example.com",
+      "mobile": "9871112233",
+      "profile_photo": null,
+      "created_at": "2026-08-23 20:47:40",
+      "password_hash": null,
+      "is_active": 1,
+      "is_verified": 1,
+      "role": "traveller"
+    },
+    {
+      "id": 24,
+      "name": "Sneha Patel",
+      "email": "sneha.p@example.com",
+      "mobile": "9822233445",
+      "profile_photo": null,
+      "created_at": "2026-08-23 20:47:40",
+      "password_hash": null,
+      "is_active": 1,
+      "is_verified": 1,
+      "role": "traveller"
+    },
+    {
+      "id": 25,
+      "name": "Rohan Mehta",
+      "email": "rohan.mehta@example.com",
+      "mobile": "9833344556",
+      "profile_photo": null,
+      "created_at": "2026-08-23 20:47:40",
+      "password_hash": null,
+      "is_active": 1,
+      "is_verified": 1,
+      "role": "traveller"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 22,
+      "listing_id": 27,
+      "vendor_id": 27,
+      "traveller_id": 23,
+      "booking_date": "2026-09-10",
+      "traveller_count": 2,
+      "amount": 5000,
+      "status": "pending",
+      "created_at": "2026-08-31 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 23,
+      "listing_id": 28,
+      "vendor_id": 27,
+      "traveller_id": 24,
+      "booking_date": "2026-09-15",
+      "traveller_count": 2,
+      "amount": 17000,
+      "status": "accepted",
+      "created_at": "2026-08-31 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 24,
+      "listing_id": 27,
+      "vendor_id": 27,
+      "traveller_id": 25,
+      "booking_date": "2026-09-01",
+      "traveller_count": 1,
+      "amount": 2500,
+      "status": "completed",
+      "created_at": "2026-08-31 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    }
+  ],
+  "trips": [
+    {
+      "id": 17,
+      "booking_id": 23,
+      "vendor_id": 27,
+      "start_time": null,
+      "end_time": null,
+      "status": "upcoming",
+      "created_at": "2026-08-31 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 18,
+      "booking_id": 24,
+      "vendor_id": 27,
+      "start_time": "2026-09-01T20:47:40.530Z",
+      "end_time": "2026-09-02T02:47:40.530Z",
+      "status": "completed",
+      "created_at": "2026-08-31 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    }
+  ],
+  "trip_locations": [
+    {
+      "id": 24,
+      "trip_id": 18,
+      "latitude": 32.2396,
+      "longitude": 77.1887,
+      "timestamp": "2026-09-02 00:47:40"
+    },
+    {
+      "id": 25,
+      "trip_id": 18,
+      "latitude": 32.2785,
+      "longitude": 77.1724,
+      "timestamp": "2026-09-02 00:47:40"
+    },
+    {
+      "id": 26,
+      "trip_id": 18,
+      "latitude": 32.3167,
+      "longitude": 77.1789,
+      "timestamp": "2026-09-02 00:47:40"
+    }
+  ],
+  "wallets": [
+    {
+      "id": 27,
+      "vendor_id": 27,
+      "balance": 2500,
+      "created_at": "2026-09-02 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 28,
+      "vendor_id": 28,
+      "balance": 0,
+      "created_at": "2026-09-02 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 29,
+      "vendor_id": 29,
+      "balance": 0,
+      "created_at": "2026-09-02 20:47:40",
+      "updated_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 30,
+      "vendor_id": 30,
+      "balance": 0,
+      "created_at": "2026-09-02 21:11:10",
+      "updated_at": "2026-09-02 21:11:10"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 10,
+      "vendor_id": 27,
+      "type": "earning",
+      "amount": 2500,
+      "description": "Earnings for completing Trip #18 (Solang Valley Adventure)",
+      "booking_id": 24,
+      "created_at": "2026-09-02 20:47:40"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 44,
+      "recipient_type": "vendor",
+      "recipient_id": 27,
+      "title": "KYC Approved!",
+      "message": "Congratulations! Your KYC application has been verified and approved. You can now create tour listings and accept bookings.",
+      "type": "kyc_approved",
+      "is_read": 1,
+      "created_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 45,
+      "recipient_type": "vendor",
+      "recipient_id": 27,
+      "title": "New Booking Request",
+      "message": "You received a new booking request for \"Solang Valley Snow Adventure\" from Vikram Sharma.",
+      "type": "booking_request",
+      "is_read": 0,
+      "created_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 46,
+      "recipient_type": "vendor",
+      "recipient_id": 29,
+      "title": "KYC Application Rejected",
+      "message": "Your KYC application was rejected. Reason: Aadhaar copy blurred. Please re-upload.",
+      "type": "kyc_rejected",
+      "is_read": 0,
+      "created_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 47,
+      "recipient_type": "vendor",
+      "recipient_id": 30,
+      "title": "KYC Submitted",
+      "message": "Your KYC application has been submitted and is currently under review by our admin team.",
+      "type": "kyc_submitted",
+      "is_read": 0,
+      "created_at": "2026-09-02 21:11:28"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": 68,
+      "actor_type": "staff",
+      "actor_id": 15,
+      "action": "KYC Approved",
+      "entity_type": "vendor",
+      "entity_id": 27,
+      "details": "{\"vendor\":\"Rahul Sharma\",\"remarks\":\"Verified successfully\"}",
+      "ip_address": null,
+      "created_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 69,
+      "actor_type": "vendor",
+      "actor_id": 27,
+      "action": "Booking Accepted",
+      "entity_type": "booking",
+      "entity_id": 23,
+      "details": "{\"amount\":17000}",
+      "ip_address": null,
+      "created_at": "2026-09-02 20:47:40"
+    },
+    {
+      "id": 70,
+      "actor_type": "vendor",
+      "actor_id": 30,
+      "action": "Vendor Created",
+      "entity_type": "vendor",
+      "entity_id": 30,
+      "details": null,
+      "ip_address": "10.223.6.40",
+      "created_at": "2026-09-02 21:11:10"
+    },
+    {
+      "id": 71,
+      "actor_type": "vendor",
+      "actor_id": 30,
+      "action": "KYC Submitted",
+      "entity_type": "vendor_kyc",
+      "entity_id": 28,
+      "details": null,
+      "ip_address": "10.223.6.40",
+      "created_at": "2026-09-02 21:11:28"
+    },
+    {
+      "id": 72,
+      "actor_type": "vendor",
+      "actor_id": 30,
+      "action": "Vendor Login",
+      "entity_type": "vendor",
+      "entity_id": 30,
+      "details": null,
+      "ip_address": "10.223.6.40",
+      "created_at": "2026-09-02 21:11:44"
+    }
+  ],
+  "otp_verifications": [],
+  "leaders": [
+    {
+      "id": 7,
+      "leader_id": "LDR-3001",
+      "name": "Captain Suresh Menon",
+      "role": "Senior Ops & Safety Lead",
+      "assigned_work": "North Zone Circuit Safety & Incident Dispatch",
+      "approvals_count": 42,
+      "tickets_handled_count": 38,
+      "incidents_created_count": 4,
+      "activity_history": "Resolved SOS Alert EMG-7002 at Manali Pass",
+      "created_at": "2026-08-03 20:47:40"
+    },
+    {
+      "id": 8,
+      "leader_id": "LDR-3002",
+      "name": "Priya Sharma",
+      "role": "Vendor Audit & Quality Manager",
+      "assigned_work": "KYC Verification & Service Standards",
+      "approvals_count": 29,
+      "tickets_handled_count": 25,
+      "incidents_created_count": 1,
+      "activity_history": "Approved KYC verification for Himalayan Treks",
+      "created_at": "2026-08-03 20:47:40"
+    },
+    {
+      "id": 9,
+      "leader_id": "LDR-3003",
+      "name": "Amit Patel",
+      "role": "Traveler Support Specialist",
+      "assigned_work": "Booking Dispute Resolution & Lost Items",
+      "approvals_count": 18,
+      "tickets_handled_count": 22,
+      "incidents_created_count": 2,
+      "activity_history": "Assigned Emergency Ticket TCK-6003 to local field team",
+      "created_at": "2026-08-03 20:47:40"
+    }
+  ],
+  "destinations": [
+    {
+      "id": 9,
+      "destination_name": "Manali & Solang Valley",
+      "places_pois": "Hadimba Temple, Solang Valley Adventure Park, Jogini Waterfall, Rohtang Pass",
+      "hotels": "Himalayan Heights Resort, Snow Valley Stay, Pinecrest Cottages",
+      "activities": "Paragliding, River Rafting, Snow Trekking, Camping",
+      "restaurants": "Cafe 1947, Johnson’s Cafe, Chopsticks Restaurant",
+      "emergency_help_info": "District Hospital: 01902-252250, Police: 112, Mountain Rescue: +91 9816000000",
+      "content_status": "Published",
+      "created_at": "2026-08-03 20:47:40"
+    },
+    {
+      "id": 10,
+      "destination_name": "Goa (North & South)",
+      "places_pois": "Calangute Beach, Fort Aguada, Dudhsagar Waterfalls, Palolem Beach",
+      "hotels": "Taj Exotica, Ocean Palms Resort, Zostel Anjuna",
+      "activities": "Scuba Diving, Banana Boat Ride, Casino Cruise, Heritage Walk",
+      "restaurants": "Britto’s, Thalassa, Curlies, Martin’s Corner",
+      "emergency_help_info": "Tourism Helpline: 1364, Calangute Police: 0832-2278223, Ambulance: 108",
+      "content_status": "Published",
+      "created_at": "2026-08-03 20:47:40"
+    },
+    {
+      "id": 11,
+      "destination_name": "Jaipur & Jaisalmer",
+      "places_pois": "Amber Fort, Hawa Mahal, Sam Sand Dunes, Jaisalmer Fort",
+      "hotels": "Chokhi Dhani Resort, Suryagarh Palace, Jaisalmer Desert Camp",
+      "activities": "Desert Safari, Quad Biking, Parasailing, Heritage Walking Tour",
+      "restaurants": "1135 AD, Rawat Mishthan Bhandar, The Trio",
+      "emergency_help_info": "Tourist Police Helpline: 0141-2821000, SMS Emergency: 1090",
+      "content_status": "Published",
+      "created_at": "2026-08-03 20:47:40"
+    },
+    {
+      "id": 12,
+      "destination_name": "Alleppey Backwaters",
+      "places_pois": "Vembanad Lake, Punnamada Lake, Marari Beach, Alappuzha Lighthouse",
+      "hotels": "Lake Palace Resort, Punnamada Resort, Vasundhara Sarovar",
+      "activities": "Houseboat Cruise, Kayaking, Village Canoe Tours, Ayurvedic Spa",
+      "restaurants": "Thaff Restaurant, Cassia, Harbour Restaurant",
+      "emergency_help_info": "District General Hospital: 0477-2253324, Police: 112, Coastal Police: 1093",
+      "content_status": "Published",
+      "created_at": "2026-08-03 20:47:40"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 7,
+      "ticket_id": "TCK-6001",
+      "reporter": "Traveler: Vikram Sharma",
+      "issue": "Weather delay on paragliding slot, timing reschedule request",
+      "category": "Booking Request",
+      "priority": "Medium",
+      "assigned_leader": "Captain Suresh Menon",
+      "status": "In Progress",
+      "resolution": "Vendor agreed to move slot to 2:00 PM tomorrow",
+      "timestamp": "2026-08-31 20:47:40"
+    },
+    {
+      "id": 8,
+      "ticket_id": "TCK-6002",
+      "reporter": "Vendor: Himalayan Treks",
+      "issue": "Traveler group 20 mins late for trek departure",
+      "category": "Vendor Conflict",
+      "priority": "Low",
+      "assigned_leader": "Priya Sharma",
+      "status": "Resolved",
+      "resolution": "Rescheduled transfer to next departure batch",
+      "timestamp": "2026-08-31 20:47:40"
+    },
+    {
+      "id": 9,
+      "ticket_id": "TCK-6003",
+      "reporter": "Traveler: Sneha Patel",
+      "issue": "Lost mobile phone near Solang Valley trail head",
+      "category": "Emergency",
+      "priority": "High",
+      "assigned_leader": "Amit Patel",
+      "status": "Open",
+      "resolution": "Ops field guide dispatched to search trail point",
+      "timestamp": "2026-08-31 20:47:40"
+    }
+  ],
+  "safety_events": [
+    {
+      "id": 7,
+      "event_id": "EMG-7001",
+      "event_type": "SOS Event",
+      "user_name": "Sneha Patel",
+      "contact_number": "+91 9822233445",
+      "location": "Solang Valley Trail (Lat: 32.3167, Long: 77.1789)",
+      "active_incidents": "Phone dropped on steep trail, traveler safe with guide",
+      "resolution_status": "Dispatched",
+      "created_at": "2026-09-01 20:47:40"
+    },
+    {
+      "id": 8,
+      "event_id": "EMG-7002",
+      "event_type": "Lost-phone Event",
+      "user_name": "Vikram Sharma",
+      "contact_number": "+91 9871112233",
+      "location": "Old Manali Market",
+      "active_incidents": "Phone lost in cafe, recovered by local guide network",
+      "resolution_status": "Resolved",
+      "created_at": "2026-09-01 20:47:40"
+    },
+    {
+      "id": 9,
+      "event_id": "EMG-7003",
+      "event_type": "Emergency Request",
+      "user_name": "Rohan Mehta",
+      "contact_number": "+91 9833344556",
+      "location": "Hampta Pass Base Camp",
+      "active_incidents": "First-aid assistance required for minor ankle twist",
+      "resolution_status": "Resolved",
+      "created_at": "2026-09-01 20:47:40"
+    }
+  ],
+  "app_activities": [
+    {
+      "id": 17,
+      "app_source": "Traveler App",
+      "action": "New Booking Request",
+      "details": "Vikram Sharma requested Solang Valley Adventure (BKG-1)",
+      "timestamp": "2026-09-02 20:37:40"
+    },
+    {
+      "id": 18,
+      "app_source": "Vendor App",
+      "action": "Vendor Registered",
+      "details": "Priya Nair (Backwater Haven) signed up and submitted KYC",
+      "timestamp": "2026-09-02 20:17:40"
+    },
+    {
+      "id": 19,
+      "app_source": "Vendor App",
+      "action": "Booking Accepted",
+      "details": "Rahul Sharma (Himalayan Guides) accepted booking BKG-2",
+      "timestamp": "2026-09-02 18:47:40"
+    },
+    {
+      "id": 20,
+      "app_source": "Vendor App",
+      "action": "Live GPS Tracking Started",
+      "details": "Rahul Sharma started active trip #3 in Solang Valley",
+      "timestamp": "2026-09-02 15:47:40"
+    },
+    {
+      "id": 21,
+      "app_source": "Leader/Ops App",
+      "action": "Ticket Escalated",
+      "details": "Amit Patel assigned Lost-phone ticket TCK-6003 to ground ops",
+      "timestamp": "2026-09-01 20:47:40"
+    },
+    {
+      "id": 22,
+      "app_source": "Vendor App",
+      "action": "KYC Document Uploaded",
+      "details": "Amit Singh (Royal Desert) uploaded Tourism License scan",
+      "timestamp": "2026-08-31 20:47:40"
+    },
+    {
+      "id": 23,
+      "app_source": "Vendor Mobile App",
+      "action": "KYC Submitted",
+      "details": "Vendor VND-30 (Himalayan Treks & Mountain Guides) submitted KYC details",
+      "timestamp": "2026-09-02 21:11:28"
+    }
+  ]
+}

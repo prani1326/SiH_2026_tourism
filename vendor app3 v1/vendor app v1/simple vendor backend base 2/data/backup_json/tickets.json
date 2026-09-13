@@ -1,0 +1,38 @@
+[
+  {
+    "id": 7,
+    "ticket_id": "TCK-6001",
+    "reporter": "Traveler: Vikram Sharma",
+    "issue": "Weather delay on paragliding slot, timing reschedule request",
+    "category": "Booking Request",
+    "priority": "Medium",
+    "assigned_leader": "Captain Suresh Menon",
+    "status": "In Progress",
+    "resolution": "Vendor agreed to move slot to 2:00 PM tomorrow",
+    "timestamp": "2026-08-31 20:47:40"
+  },
+  {
+    "id": 8,
+    "ticket_id": "TCK-6002",
+    "reporter": "Vendor: Himalayan Treks",
+    "issue": "Traveler group 20 mins late for trek departure",
+    "category": "Vendor Conflict",
+    "priority": "Low",
+    "assigned_leader": "Priya Sharma",
+    "status": "Resolved",
+    "resolution": "Rescheduled transfer to next departure batch",
+    "timestamp": "2026-08-31 20:47:40"
+  },
+  {
+    "id": 9,
+    "ticket_id": "TCK-6003",
+    "reporter": "Traveler: Sneha Patel",
+    "issue": "Lost mobile phone near Solang Valley trail head",
+    "category": "Emergency",
+    "priority": "High",
+    "assigned_leader": "Amit Patel",
+    "status": "Open",
+    "resolution": "Ops field guide dispatched to search trail point",
+    "timestamp": "2026-08-31 20:47:40"
+  }
+]

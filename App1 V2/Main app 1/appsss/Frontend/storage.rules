@@ -1,0 +1,27 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper function
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // User Avatar uploads:
+    // Only the authenticated user can upload their avatar.
+    // Size limit: 5MB, must be an image.
+    match /users/{userId}/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.uid == userId
+                   && request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    // Destination assets:
+    // Read-only to public, write restricted to admins.
+    match /destinations/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.role == 'admin';
+    }
+  }
+}

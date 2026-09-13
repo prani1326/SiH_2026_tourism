@@ -1,0 +1,17 @@
+{
+  "name": "sih-web-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Web Dashboard Central Database & REST API Backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/db/seed.js"
+  },
+  "dependencies": {
+    "@dataconnect/generated": "file:src/dataconnect-generated",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase": "^12.18.0",
+    "sql.js": "^1.12.0"
+  }
+}

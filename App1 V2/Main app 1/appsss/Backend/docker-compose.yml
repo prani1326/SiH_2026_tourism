@@ -1,0 +1,83 @@
+﻿version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: sih_tourist_backend_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - DATABASE_URL=postgresql+psycopg://tourist_admin:tourist_secure_2026@db:5432/tourist_db
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=sih-tourist-secret-key-enterprise-2026-super-secure-token-change-in-prod
+      - FIREBASE_MOCK_MODE=true
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  worker:
+    build: .
+    container_name: sih_tourist_backend_worker
+    restart: always
+    command: ["python", "-m", "app.worker"]
+    environment:
+      - ENVIRONMENT=development
+      - DATABASE_URL=postgresql+psycopg://tourist_admin:tourist_secure_2026@db:5432/tourist_db
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=sih-tourist-secret-key-enterprise-2026-super-secure-token-change-in-prod
+      - FIREBASE_MOCK_MODE=true
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:16-alpine
+    container_name: sih_tourist_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: tourist_admin
+      POSTGRES_PASSWORD: tourist_secure_2026
+      POSTGRES_DB: tourist_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tourist_admin -d tourist_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: sih_tourist_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:

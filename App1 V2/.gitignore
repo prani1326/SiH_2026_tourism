@@ -1,0 +1,15 @@
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+__MACOSX/
+*.pyc
+__pycache__/
+venv*/
+.venv/
+.pytest_cache/
+*.log
+emulator_screen.png

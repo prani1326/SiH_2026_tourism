@@ -1,0 +1,23 @@
+[
+  {
+    "id": 24,
+    "trip_id": 18,
+    "latitude": 32.2396,
+    "longitude": 77.1887,
+    "timestamp": "2026-09-02 00:47:40"
+  },
+  {
+    "id": 25,
+    "trip_id": 18,
+    "latitude": 32.2785,
+    "longitude": 77.1724,
+    "timestamp": "2026-09-02 00:47:40"
+  },
+  {
+    "id": 26,
+    "trip_id": 18,
+    "latitude": 32.3167,
+    "longitude": 77.1789,
+    "timestamp": "2026-09-02 00:47:40"
+  }
+]

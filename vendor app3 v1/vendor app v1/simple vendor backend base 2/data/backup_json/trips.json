@@ -1,0 +1,22 @@
+[
+  {
+    "id": 17,
+    "booking_id": 23,
+    "vendor_id": 27,
+    "start_time": null,
+    "end_time": null,
+    "status": "upcoming",
+    "created_at": "2026-08-31 20:47:40",
+    "updated_at": "2026-09-02 20:47:40"
+  },
+  {
+    "id": 18,
+    "booking_id": 24,
+    "vendor_id": 27,
+    "start_time": "2026-09-01T20:47:40.530Z",
+    "end_time": "2026-09-02T02:47:40.530Z",
+    "status": "completed",
+    "created_at": "2026-08-31 20:47:40",
+    "updated_at": "2026-09-02 20:47:40"
+  }
+]

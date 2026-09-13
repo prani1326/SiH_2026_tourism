@@ -1,0 +1,71 @@
+mutation CreateSeedData @transaction {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      fullName: "Alice Host",
+      email: "alice@example.com",
+      role: "host"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440002",
+      fullName: "Bob Traveler",
+      email: "bob@example.com",
+      role: "traveler"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440003",
+      fullName: "Charlie Superhost",
+      email: "charlie@example.com",
+      role: "host"
+    }
+  ])
+  property_insertMany(data: [
+    {
+      id: "770e8400-e29b-41d4-a716-446655440001",
+      hostId: "550e8400-e29b-41d4-a716-446655440001",
+      title: "Cozy Beach Cottage",
+      description: "A beautiful cottage near the sea.",
+      pricePerNight: 150.0,
+      address: "123 Ocean Ave, Seaside"
+    },
+    {
+      id: "770e8400-e29b-41d4-a716-446655440002",
+      hostId: "550e8400-e29b-41d4-a716-446655440003",
+      title: "Mountain Retreat",
+      description: "Quiet cabin in the woods.",
+      pricePerNight: 200.0,
+      address: "456 Pine Rd, Mountain View"
+    }
+  ])
+  availability_insertMany(data: [
+    {
+      propertyId: "770e8400-e29b-41d4-a716-446655440001",
+      date: "2023-12-01",
+      isAvailable: true
+    },
+    {
+      propertyId: "770e8400-e29b-41d4-a716-446655440002",
+      date: "2023-12-05",
+      isAvailable: true
+    }
+  ])
+  booking_insertMany(data: [
+    {
+      propertyId: "770e8400-e29b-41d4-a716-446655440001",
+      travelerId: "550e8400-e29b-41d4-a716-446655440002",
+      startDate: "2023-12-10",
+      endDate: "2023-12-15",
+      totalCost: 750.0,
+      status: "confirmed"
+    }
+  ])
+  review_insertMany(data: [
+    {
+      propertyId: "770e8400-e29b-41d4-a716-446655440001",
+      travelerId: "550e8400-e29b-41d4-a716-446655440002",
+      rating: 5,
+      comment: "Wonderful stay!",
+      createdAt: "2023-12-16T10:00:00Z"
+    }
+  ])
+}

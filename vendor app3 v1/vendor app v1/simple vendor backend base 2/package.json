@@ -1,0 +1,36 @@
+{
+  "name": "travel-vendor-backend",
+  "version": "1.0.0",
+  "description": "Travel Company Vendor/Guide Backend MVP with Admin Verification",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/database/firestoreSeeder.js",
+    "test": "node tests/api_test.js"
+  },
+  "keywords": [
+    "travel",
+    "vendor",
+    "guide",
+    "express",
+    "firebase",
+    "firestore",
+    "jwt",
+    "kyc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "firebase-admin": "^14.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^14.0.2"
+  }
+}

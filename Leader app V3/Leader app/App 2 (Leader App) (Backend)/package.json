@@ -1,0 +1,42 @@
+{
+  "name": "leader-backend",
+  "version": "1.0.0",
+  "description": "LEADER Ops Mobile App Backend — Tourism Operations Command Center",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "seed:firestore": "node scripts/seed_firestore.js",
+    "test": "jest --forceExit --detectOpenHandles",
+    "test:auth": "jest tests/auth.test.js --forceExit",
+    "test:integration": "jest tests/ --forceExit --detectOpenHandles"
+  },
+  "keywords": [
+    "tourism",
+    "operations",
+    "backend",
+    "leader"
+  ],
+  "license": "PRIVATE",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "firebase-admin": "^14.3.0",
+    "firebase-functions": "^7.3.2",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.3.0",
+    "otplib": "^12.0.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

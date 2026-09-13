@@ -1,0 +1,85 @@
+mutation InsertUser {
+  user_insert(data: {
+    id_expr: "auth.uid",
+    fullName: "John Doe",
+    email: "john.doe@example.com",
+    role: "traveler"
+  })
+}
+
+mutation UpsertAvailability($date: Date!, $isAvailable: Boolean!) {
+  availability_upsert(data: {
+    id_expr: "uuidV4()",
+    propertyId: "550e8400-e29b-41d4-a716-446655440000",
+    date: $date,
+    isAvailable: $isAvailable
+  })
+}
+
+mutation CreateBooking($propertyId: UUID!, $startDate: Date!, $endDate: Date!, $totalCost: Float!) {
+  booking_insert(data: {
+    propertyId: $propertyId,
+    travelerId_expr: "auth.uid",
+    startDate: $startDate,
+    endDate: $endDate,
+    totalCost: $totalCost,
+    status: "confirmed"
+  })
+}
+
+mutation AddProperty($title: String!, $description: String!, $pricePerNight: Float!, $address: String!) {
+  property_insert(data: {
+    title: $title,
+    description: $description,
+    pricePerNight: $pricePerNight,
+    address: $address,
+    hostId_expr: "auth.uid"
+  })
+}
+
+mutation AddReview($propertyId: UUID!, $rating: Int!, $comment: String!) {
+  review_insert(data: {
+    propertyId: $propertyId,
+    travelerId_expr: "auth.uid",
+    rating: $rating,
+    comment: $comment,
+    createdAt_expr: "request.time"
+  })
+}
+
+mutation UpdateBookingStatus($id: UUID!, $status: String!) {
+  booking_update(key: {id: $id}, data: {status: $status})
+}
+
+mutation DeleteReview($id: UUID!) {
+  review_delete(key: {id: $id})
+}
+
+query GetMyProfile @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    fullName
+    email
+    role
+  }
+}
+
+query ListAllProperties @auth(level: PUBLIC, insecureReason: "Property listings are intended to be public for discovery.") {
+  properties {
+    title
+    pricePerNight
+    address
+    imageUrls
+  }
+}
+
+query GetPropertyDetails($id: UUID!) @auth(level: PUBLIC, insecureReason: "Property details are public to facilitate bookings.") {
+  property(id: $id) {
+    title
+    description
+    amenities
+    reviews_on_property {
+      rating
+      comment
+    }
+  }
+}

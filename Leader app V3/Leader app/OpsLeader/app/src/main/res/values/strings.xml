@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ops Leader</string>
+    <string name="sign_up_title">Set Up Account</string>
+    <string name="full_name_label">Full Name</string>
+    <string name="reference_code_label">Reference / Invite Code</string>
+    <string name="create_account_btn">Create Account</string>
+    <string name="already_have_account">Already have an account? Sign in</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="first_time_setup">First time? Set up your account</string>
+    <string name="pending_approval_msg">Account created — pending admin approval</string>
+    <string name="error_invalid_reference">Invalid Reference ID. Please check the code and try again.</string>
+    <string name="error_empty_fields">Please fill all fields</string>
+    <string name="error_network">Network error occurred</string>
+    <string name="back_to_login">Back to Sign In</string>
+</resources>

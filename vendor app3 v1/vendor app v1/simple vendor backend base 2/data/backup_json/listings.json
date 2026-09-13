@@ -1,0 +1,41 @@
+[
+  {
+    "id": 27,
+    "vendor_id": 27,
+    "title": "Solang Valley Snow & Paragliding Adventure",
+    "description": "Experience high-altitude paragliding, zorbing, and scenic snow landscapes in Solang Valley with certified mountain pilots.",
+    "destination": "Manali, Himachal Pradesh",
+    "price": 2500,
+    "duration": "1 Day",
+    "max_travellers": 10,
+    "status": "active",
+    "created_at": "2026-08-30 20:47:40",
+    "updated_at": "2026-09-02 20:47:40"
+  },
+  {
+    "id": 28,
+    "vendor_id": 27,
+    "title": "Hampta Pass Trekking & Riverside Camping",
+    "description": "Stunning 4-day crossover trek from Kullu valley into the arid Chandra valley of Spiti with full guide support & meals.",
+    "destination": "Manali & Spiti",
+    "price": 8500,
+    "duration": "4 Days 3 Nights",
+    "max_travellers": 8,
+    "status": "active",
+    "created_at": "2026-08-30 20:47:40",
+    "updated_at": "2026-09-02 20:47:40"
+  },
+  {
+    "id": 29,
+    "vendor_id": 27,
+    "title": "Old Manali Heritage & Cafe Walking Tour",
+    "description": "Explore ancient wooden temples, hidden pine forest trails, and vibrant cultural cafes with a local certified guide.",
+    "destination": "Old Manali",
+    "price": 999,
+    "duration": "4 Hours",
+    "max_travellers": 12,
+    "status": "active",
+    "created_at": "2026-08-30 20:47:40",
+    "updated_at": "2026-09-02 20:47:40"
+  }
+]

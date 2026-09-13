@@ -1,0 +1,40 @@
+type User @table {
+  fullName: String!
+  email: String!
+  role: String!
+  phoneNumber: String
+  profilePictureUrl: String
+}
+
+type Property @table {
+  title: String!
+  description: String!
+  pricePerNight: Float!
+  address: String!
+  host: User!
+  amenities: [String]
+  imageUrls: [String]
+}
+
+type Booking @table {
+  property: Property!
+  traveler: User!
+  startDate: Date!
+  endDate: Date!
+  totalCost: Float!
+  status: String!
+}
+
+type Review @table {
+  property: Property!
+  traveler: User!
+  rating: Int!
+  comment: String!
+  createdAt: Timestamp!
+}
+
+type Availability @table {
+  property: Property!
+  date: Date!
+  isAvailable: Boolean!
+}

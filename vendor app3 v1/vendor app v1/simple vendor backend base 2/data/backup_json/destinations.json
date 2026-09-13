@@ -1,0 +1,46 @@
+[
+  {
+    "id": 9,
+    "destination_name": "Manali & Solang Valley",
+    "places_pois": "Hadimba Temple, Solang Valley Adventure Park, Jogini Waterfall, Rohtang Pass",
+    "hotels": "Himalayan Heights Resort, Snow Valley Stay, Pinecrest Cottages",
+    "activities": "Paragliding, River Rafting, Snow Trekking, Camping",
+    "restaurants": "Cafe 1947, Johnson’s Cafe, Chopsticks Restaurant",
+    "emergency_help_info": "District Hospital: 01902-252250, Police: 112, Mountain Rescue: +91 9816000000",
+    "content_status": "Published",
+    "created_at": "2026-08-03 20:47:40"
+  },
+  {
+    "id": 10,
+    "destination_name": "Goa (North & South)",
+    "places_pois": "Calangute Beach, Fort Aguada, Dudhsagar Waterfalls, Palolem Beach",
+    "hotels": "Taj Exotica, Ocean Palms Resort, Zostel Anjuna",
+    "activities": "Scuba Diving, Banana Boat Ride, Casino Cruise, Heritage Walk",
+    "restaurants": "Britto’s, Thalassa, Curlies, Martin’s Corner",
+    "emergency_help_info": "Tourism Helpline: 1364, Calangute Police: 0832-2278223, Ambulance: 108",
+    "content_status": "Published",
+    "created_at": "2026-08-03 20:47:40"
+  },
+  {
+    "id": 11,
+    "destination_name": "Jaipur & Jaisalmer",
+    "places_pois": "Amber Fort, Hawa Mahal, Sam Sand Dunes, Jaisalmer Fort",
+    "hotels": "Chokhi Dhani Resort, Suryagarh Palace, Jaisalmer Desert Camp",
+    "activities": "Desert Safari, Quad Biking, Parasailing, Heritage Walking Tour",
+    "restaurants": "1135 AD, Rawat Mishthan Bhandar, The Trio",
+    "emergency_help_info": "Tourist Police Helpline: 0141-2821000, SMS Emergency: 1090",
+    "content_status": "Published",
+    "created_at": "2026-08-03 20:47:40"
+  },
+  {
+    "id": 12,
+    "destination_name": "Alleppey Backwaters",
+    "places_pois": "Vembanad Lake, Punnamada Lake, Marari Beach, Alappuzha Lighthouse",
+    "hotels": "Lake Palace Resort, Punnamada Resort, Vasundhara Sarovar",
+    "activities": "Houseboat Cruise, Kayaking, Village Canoe Tours, Ayurvedic Spa",
+    "restaurants": "Thaff Restaurant, Cassia, Harbour Restaurant",
+    "emergency_help_info": "District General Hospital: 0477-2253324, Police: 112, Coastal Police: 1093",
+    "content_status": "Published",
+    "created_at": "2026-08-03 20:47:40"
+  }
+]

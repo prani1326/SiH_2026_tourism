@@ -1,0 +1,15 @@
+import sys
+import os
+from app.core.security import get_current_user
+
+def manual_auth_check():
+    token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI0N2Y4MDYwMDM5YjVmNDBkOTQ5NjkzOGJiMTg5NzA2ZWY4ODkzM2QiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdHJpcC1wbGFubmVyLXZlcnNpb24tMSIsImF1ZCI6InRyaXAtcGxhbm5lci12ZXJzaW9uLTEiLCJhdXRoX3RpbWUiOjE3ODg1NDkwOTYsInVzZXJfaWQiOiJwcUdPZFhPV21pVWw4N0hCZ3VnVVhaa251QmMyIiwic3ViIjoicHFHT2RYT1dtaVVsODdIQmd1Z1VYWmtudUJjMiIsImlhdCI6MTc4ODU1NDk5NCwiZXhwIjoxNzg4NTU4NTk0LCJlbWFpbCI6ImFiY0BhYmMuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFiY0BhYmMuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.WPzWwVii5K6OzPsUq6G8HAs5YmhisqxjgmWkkcepyu_Bx-FKRQukiikyxfB4dGs_T7hyUGRcd9m_xEg9GNkJAs51tGVnCbUU92xTzavOAq7pZr8v9ATA2kT7AJMeEd6sMPZpjwnmsMyaNC03Ys10RN8aNQbXhgwd1OM5SXZ_wtYorcd1A54hKm7RwQg8wVuYliiJt8aOfxzz_7lShb1_6iD2MXO_ptKearmjTR-T39J2R6SFUqdoaJaQkuFAUB1pWIo_tF4J1X35JZzMtxi0QAAr1Y8npNQYqXwr0hAd0wg0KIMGCharRqN77uyNzU-LI7pIYvSppxgVKE4Guacp6w"
+
+    try:
+        user = get_current_user(token=token)
+        print("SUCCESS_USER:", user.id, user.email, user.firebase_uid)
+    except Exception as e:
+        print("ERROR:", type(e), e)
+
+if __name__ == "__main__":
+    manual_auth_check()

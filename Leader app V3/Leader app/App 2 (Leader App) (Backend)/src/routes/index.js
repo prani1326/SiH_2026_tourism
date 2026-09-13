@@ -1,0 +1,44 @@
+const express = require('express');
+const router = express.Router();
+
+const authRoutes = require('./auth');
+const dashboardRoutes = require('./dashboard');
+const alertRoutes = require('./alerts');
+const tripRoutes = require('./trips');
+const touristRoutes = require('./tourists');
+const bookingRoutes = require('./bookings');
+const supportRoutes = require('./support');
+const incidentRoutes = require('./incidents');
+const sosRoutes = require('./sos');
+const safetyRoutes = require('./safety');
+const weatherRoutes = require('./weather');
+const partnerRoutes = require('./partners');
+const communicationRoutes = require('./communications');
+const notificationRoutes = require('./notifications');
+const reportRoutes = require('./reports');
+const teamRoutes = require('./team');
+const auditRoutes = require('./audit');
+const searchRoutes = require('./search');
+const storageRoutes = require('./storage');
+
+router.use('/auth', authRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/alerts', alertRoutes);
+router.use('/trips', tripRoutes);
+router.use('/tourists', touristRoutes);
+router.use('/bookings', bookingRoutes);
+router.use('/support', supportRoutes);
+router.use('/incidents', incidentRoutes);
+router.use('/sos', sosRoutes);
+router.use('/safety', safetyRoutes);
+router.use('/weather', weatherRoutes);
+router.use('/partners', partnerRoutes);
+router.use('/communications', communicationRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/reports', reportRoutes);
+router.use('/team', teamRoutes);
+router.use('/audit', auditRoutes);
+router.use('/search', searchRoutes);
+router.use('/storage', storageRoutes);
+
+module.exports = router;

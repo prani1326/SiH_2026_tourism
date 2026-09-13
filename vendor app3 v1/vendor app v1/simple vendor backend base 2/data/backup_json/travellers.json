@@ -1,0 +1,38 @@
+[
+  {
+    "id": 23,
+    "name": "Vikram Sharma",
+    "email": "vikram.sharma@example.com",
+    "mobile": "9871112233",
+    "profile_photo": null,
+    "created_at": "2026-08-23 20:47:40",
+    "password_hash": null,
+    "is_active": 1,
+    "is_verified": 1,
+    "role": "traveller"
+  },
+  {
+    "id": 24,
+    "name": "Sneha Patel",
+    "email": "sneha.p@example.com",
+    "mobile": "9822233445",
+    "profile_photo": null,
+    "created_at": "2026-08-23 20:47:40",
+    "password_hash": null,
+    "is_active": 1,
+    "is_verified": 1,
+    "role": "traveller"
+  },
+  {
+    "id": 25,
+    "name": "Rohan Mehta",
+    "email": "rohan.mehta@example.com",
+    "mobile": "9833344556",
+    "profile_photo": null,
+    "created_at": "2026-08-23 20:47:40",
+    "password_hash": null,
+    "is_active": 1,
+    "is_verified": 1,
+    "role": "traveller"
+  }
+]

@@ -1,0 +1,92 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAdminOrOperations() {
+      return isAuthenticated() && (
+        request.auth.token.role == 'admin' ||
+        request.auth.token.role == 'operations' ||
+        request.auth.token.role == 'leader'
+      );
+    }
+
+    // Prevents client from directly altering server-controlled KYC verification flags
+    function doesNotModifyKycSecurityFields() {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(['kyc_verified', 'kycVerified', 'verificationReference', 'verifiedAt']);
+    }
+
+    // 1. Users collection and subcollections
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdminOrOperations();
+      allow create: if isOwner(userId) || isAdminOrOperations();
+      allow update: if (isOwner(userId) && doesNotModifyKycSecurityFields()) || isAdminOrOperations();
+      allow delete: if isAdminOrOperations();
+      
+      // Structured address subcollection
+      match /profile/address {
+        allow read, write: if isOwner(userId) || isAdminOrOperations();
+      }
+
+      // Secure KYC subcollection
+      match /kyc/{docId} {
+        allow read: if isOwner(userId) || isAdminOrOperations();
+        allow write: if isAdminOrOperations();
+      }
+      
+      // Emergency Contacts
+      match /emergencyContacts/{contactId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Safety Settings
+      match /safety/{document=**} {
+        allow read, write: if isOwner(userId) || isAdminOrOperations();
+      }
+    }
+
+    // 2. Central Emergency Alerts (SOS)
+    match /emergencyAlerts/{alertId} {
+      allow create: if isAuthenticated();
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        resource.data.assignedLeaderId == request.auth.uid ||
+        isAdminOrOperations()
+      );
+      allow update: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isAdminOrOperations()
+      );
+      allow delete: if isAdminOrOperations();
+    }
+
+    // 3. Safety Incident Reports
+    match /incidents/{incidentId} {
+      allow create: if isAuthenticated();
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isAdminOrOperations()
+      );
+      allow update, delete: if isAdminOrOperations();
+    }
+
+    // 4. Trips & Itineraries
+    match /trips/{tripId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Default catch-all for authenticated requests
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

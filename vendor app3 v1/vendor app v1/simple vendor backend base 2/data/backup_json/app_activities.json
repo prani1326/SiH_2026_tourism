@@ -1,0 +1,51 @@
+[
+  {
+    "id": 17,
+    "app_source": "Traveler App",
+    "action": "New Booking Request",
+    "details": "Vikram Sharma requested Solang Valley Adventure (BKG-1)",
+    "timestamp": "2026-09-02 20:37:40"
+  },
+  {
+    "id": 18,
+    "app_source": "Vendor App",
+    "action": "Vendor Registered",
+    "details": "Priya Nair (Backwater Haven) signed up and submitted KYC",
+    "timestamp": "2026-09-02 20:17:40"
+  },
+  {
+    "id": 19,
+    "app_source": "Vendor App",
+    "action": "Booking Accepted",
+    "details": "Rahul Sharma (Himalayan Guides) accepted booking BKG-2",
+    "timestamp": "2026-09-02 18:47:40"
+  },
+  {
+    "id": 20,
+    "app_source": "Vendor App",
+    "action": "Live GPS Tracking Started",
+    "details": "Rahul Sharma started active trip #3 in Solang Valley",
+    "timestamp": "2026-09-02 15:47:40"
+  },
+  {
+    "id": 21,
+    "app_source": "Leader/Ops App",
+    "action": "Ticket Escalated",
+    "details": "Amit Patel assigned Lost-phone ticket TCK-6003 to ground ops",
+    "timestamp": "2026-09-01 20:47:40"
+  },
+  {
+    "id": 22,
+    "app_source": "Vendor App",
+    "action": "KYC Document Uploaded",
+    "details": "Amit Singh (Royal Desert) uploaded Tourism License scan",
+    "timestamp": "2026-08-31 20:47:40"
+  },
+  {
+    "id": 23,
+    "app_source": "Vendor Mobile App",
+    "action": "KYC Submitted",
+    "details": "Vendor VND-30 (Himalayan Treks & Mountain Guides) submitted KYC details",
+    "timestamp": "2026-09-02 21:11:28"
+  }
+]

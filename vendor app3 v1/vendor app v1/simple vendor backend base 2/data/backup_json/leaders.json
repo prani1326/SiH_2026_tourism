@@ -1,0 +1,38 @@
+[
+  {
+    "id": 7,
+    "leader_id": "LDR-3001",
+    "name": "Captain Suresh Menon",
+    "role": "Senior Ops & Safety Lead",
+    "assigned_work": "North Zone Circuit Safety & Incident Dispatch",
+    "approvals_count": 42,
+    "tickets_handled_count": 38,
+    "incidents_created_count": 4,
+    "activity_history": "Resolved SOS Alert EMG-7002 at Manali Pass",
+    "created_at": "2026-08-03 20:47:40"
+  },
+  {
+    "id": 8,
+    "leader_id": "LDR-3002",
+    "name": "Priya Sharma",
+    "role": "Vendor Audit & Quality Manager",
+    "assigned_work": "KYC Verification & Service Standards",
+    "approvals_count": 29,
+    "tickets_handled_count": 25,
+    "incidents_created_count": 1,
+    "activity_history": "Approved KYC verification for Himalayan Treks",
+    "created_at": "2026-08-03 20:47:40"
+  },
+  {
+    "id": 9,
+    "leader_id": "LDR-3003",
+    "name": "Amit Patel",
+    "role": "Traveler Support Specialist",
+    "assigned_work": "Booking Dispute Resolution & Lost Items",
+    "approvals_count": 18,
+    "tickets_handled_count": 22,
+    "incidents_created_count": 2,
+    "activity_history": "Assigned Emergency Ticket TCK-6003 to local field team",
+    "created_at": "2026-08-03 20:47:40"
+  }
+]

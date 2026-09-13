@@ -1,0 +1,290 @@
+{
+  "timestamp": "2026-09-04T00:00:48Z",
+  "total_tests": 29,
+  "passed": 16,
+  "failed": 13,
+  "results": [
+    {
+      "name": "Root System Endpoint",
+      "method": "GET",
+      "path": "/",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Health Check",
+      "method": "GET",
+      "path": "/health",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Mobile Splash Init",
+      "method": "GET",
+      "path": "/api/v1/auth/splash/init",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Standard Password Login",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Firebase ID Token Login",
+      "method": "POST",
+      "path": "/api/v1/auth/firebase-login",
+      "status_code": 404,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Token Refresh",
+      "method": "POST",
+      "path": "/api/v1/auth/refresh",
+      "status_code": 401,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Phone OTP Dispatch",
+      "method": "POST",
+      "path": "/api/v1/auth/phone/otp/send",
+      "status_code": 404,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Phone OTP Verification",
+      "method": "POST",
+      "path": "/api/v1/auth/phone/otp/verify",
+      "status_code": 404,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Get Profile (Platform JWT)",
+      "method": "GET",
+      "path": "/api/v1/users/me",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Get Profile (Firebase Token)",
+      "method": "GET",
+      "path": "/api/v1/users/me",
+      "status_code": 401,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Update Preferences in Firestore",
+      "method": "POST",
+      "path": "/api/v1/users/onboarding/preferences",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Protected Route Without Auth Header",
+      "method": "GET",
+      "path": "/api/v1/users/me",
+      "status_code": 401,
+      "expected": 401,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Protected Route With Malformed Token",
+      "method": "GET",
+      "path": "/api/v1/users/me",
+      "status_code": 401,
+      "expected": 401,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Invalid Login Payload Schema",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status_code": 422,
+      "expected": 422,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "List Destinations from Firestore",
+      "method": "GET",
+      "path": "/api/v1/destinations/",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Get Destination Detail (3bac6c1a-dfca-46a3-b675-8b0e3f4919cb)",
+      "method": "GET",
+      "path": "/api/v1/destinations/3bac6c1a-dfca-46a3-b675-8b0e3f4919cb",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Global Search",
+      "method": "GET",
+      "path": "/api/v1/search/?q=monument",
+      "status_code": 404,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Explore Categories",
+      "method": "GET",
+      "path": "/api/v1/explore/categories",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "AI Trip Planner Engine",
+      "method": "POST",
+      "path": "/api/v1/trips/ai-plan",
+      "status_code": 422,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Create Trip in Firestore",
+      "method": "POST",
+      "path": "/api/v1/trips/",
+      "status_code": 405,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Request-to-Book in Firestore",
+      "method": "POST",
+      "path": "/api/v1/bookings/request",
+      "status_code": 405,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "List User Bookings from Firestore",
+      "method": "GET",
+      "path": "/api/v1/bookings/",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Add Emergency Contact in Firestore",
+      "method": "POST",
+      "path": "/api/v1/users/me/emergency-contacts",
+      "status_code": 404,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "List Emergency Contacts from Firestore",
+      "method": "GET",
+      "path": "/api/v1/users/me/emergency-contacts",
+      "status_code": 404,
+      "expected": 200,
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Trigger Emergency SOS in Firestore",
+      "method": "POST",
+      "path": "/api/v1/safety/sos",
+      "status_code": 200,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Resolve SOS Alert (5318a6f1-f43c-407a-affa-237916b0756b) in Firestore",
+      "method": "POST",
+      "path": "/api/v1/safety/sos/5318a6f1-f43c-407a-affa-237916b0756b/resolve",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "List Notifications from Firestore",
+      "method": "GET",
+      "path": "/api/v1/notifications/",
+      "status_code": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "name": "Create Support Ticket in Firestore",
+      "method": "POST",
+      "path": "/api/v1/support/tickets",
+      "status_code": 422,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    },
+    {
+      "name": "Submit Verified Review in Firestore",
+      "method": "POST",
+      "path": "/api/v1/reviews/",
+      "status_code": 400,
+      "expected": [
+        200,
+        201
+      ],
+      "result": "FAIL",
+      "notes": ""
+    }
+  ]
+}

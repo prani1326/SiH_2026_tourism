@@ -1,0 +1,11 @@
+[
+  {
+    "id": 10,
+    "vendor_id": 27,
+    "type": "earning",
+    "amount": 2500,
+    "description": "Earnings for completing Trip #18 (Solang Valley Adventure)",
+    "booking_id": 24,
+    "created_at": "2026-09-02 20:47:40"
+  }
+]
